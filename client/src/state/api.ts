@@ -45,14 +45,14 @@ export interface Task {
   id: number;
   title: string;
   description?: string;
-  status?: Status;
-  priority?: Priority;
+  status?: string;
+  priority?: string;
   tags?: string;
-  startDate?: string;
-  dueDate?: string;
+  startDate?: Date | string | null;
+  dueDate?: Date | string | null;
   points?: number;
   projectId: number;
-  authorUserId?: number;
+  authorUserId: number;
   assignedUserId?: number;
 
   author?: User;
@@ -137,7 +137,11 @@ export const api = createApi({
       query: (task) => ({
         url: "tasks",
         method: "POST",
-        body: task,
+        body: {
+          ...task,
+          startDate: task.startDate ? new Date(task.startDate).toISOString() : null,
+          dueDate: task.dueDate ? new Date(task.dueDate).toISOString() : null,
+        },
       }),
       invalidatesTags: ["Tasks"],
     }),

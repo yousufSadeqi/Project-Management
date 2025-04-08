@@ -2,7 +2,7 @@ import { Task } from "@/state/api";
 import { format } from "date-fns";
 import Image from "next/image";
 import React from "react";
-
+  
 type Props = {
   task: Task;
 };

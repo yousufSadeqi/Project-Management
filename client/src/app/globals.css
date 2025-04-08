@@ -63,3 +63,37 @@ body,
   width: 0px;
   height: 0px;
 }
+
+.sidebar-link {
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background-color: #f0f0f0; /* Light mode */
+  background-color: #333; /* Dark mode */
+  transform: translateX(5px); /* Slight move to the right */
+}
+
+.active-indicator {
+  background-color: #0070f3; /* Brand color for active state */
+}
+
+.profile-picture {
+  border: 2px solid #0070f3; /* Add a border to the profile picture */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: transform 0.3s ease;
+}
+
+.profile-picture:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.sign-out-button {
+  background-color: #ff4d4f; /* Distinct color for sign out */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sign-out-button:hover {
+  background-color: #ff7875; /* Lighter shade on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}

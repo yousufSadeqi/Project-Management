@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "aws-amplify": "^6.14.1",
-    "crypto-js": "^4.2.0"
-  }
-}

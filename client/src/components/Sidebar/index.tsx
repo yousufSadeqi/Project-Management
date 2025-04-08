@@ -79,6 +79,7 @@ const Sidebar = () => {
             alt="Logo"
             width={40}
             height={40}
+            className="rounded-full border-2 border-blue-500 shadow-sm"
           />
           <div>
             <h3 className="text-md font-bold tracking-wide dark:text-gray-200">
@@ -103,7 +104,7 @@ const Sidebar = () => {
         {/* PROJECTS LINKS */}
         <button
           onClick={() => setShowProjects((prev) => !prev)}
-          className="flex w-full items-center justify-between px-8 py-3 text-gray-500"
+          className="flex w-full items-center justify-between px-8 py-3 text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700"
         >
           <span className="">Projects</span>
           {showProjects ? (
@@ -126,7 +127,7 @@ const Sidebar = () => {
         {/* PRIORITIES LINKS */}
         <button
           onClick={() => setShowPriority((prev) => !prev)}
-          className="flex w-full items-center justify-between px-8 py-3 text-gray-500"
+          className="flex w-full items-center justify-between px-8 py-3 text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700"
         >
           <span className="">Priority</span>
           {showPriority ? (
@@ -170,7 +171,7 @@ const Sidebar = () => {
                 alt={currentUserDetails?.username || "User Profile Picture"}
                 width={100}
                 height={50}
-                className="h-full rounded-full object-cover"
+                className="h-full rounded-full object-cover border-2 border-blue-500 shadow-sm"
               />
             ) : (
               <User className="h-6 w-6 cursor-pointer self-center rounded-full dark:text-white" />
@@ -180,7 +181,7 @@ const Sidebar = () => {
             {currentUserDetails?.username}
           </span>
           <button
-            className="self-start rounded bg-blue-400 px-4 py-2 text-xs font-bold text-white hover:bg-blue-500 md:block"
+            className="self-start rounded bg-red-500 px-4 py-2 text-xs font-bold text-white hover:bg-red-600 md:block"
             onClick={handleSignOut}
           >
             Sign out
